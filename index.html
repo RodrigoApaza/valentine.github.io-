@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/press-start-2p"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="mensaje">Feliz Dia de San Valentín mi bella Cocodrilo :3</div>
+    <div id="escenario">
+      <div id="verde">
+        <img src="green.png" alt="" />
+      </div>
+      <div id="rosa">
+        <img src="pink.png" alt="" />
+      </div>
+
+      <div id="rose">
+        <img src="rose.png" alt="" />
+      </div>
+    </div>
+    <div id="texto"></div>
+  </body>
+</html>
+
+<script>
+  let n = 0;
+  let x_o = 91;
+  let y_o = 58;
+  let vel = 10;
+
+  let rosa = document.getElementById("rose");
+  let text = document.getElementById("texto");
+  text.textContent = n + " rosas entregadas desde que se abrió la página :3";
+  let pos_x = x_o;
+
+  function miFuncion() {
+    rosa.style.left = pos_x + "px";
+    pos_x = pos_x + vel;
+
+    if (pos_x >= 871) {
+      rosa.style.left = x_o + "px";
+      rosa.style.bottom = y_o + "px";
+      pos_x = x_o;
+      n = n + 1;
+      text.textContent =
+        n + " rosas entregadas desde que se abrió la página :3";
+    }
+
+    let sw = Math.floor(Math.random() * 2);
+
+    let v = parseInt(Math.floor(Math.random() * 3));
+
+    if (sw == 0) {
+      rosa.style.bottom = y_o + v + "px";
+    } else {
+      rosa.style.bottom = y_o - v + "px";
+    }
+  }
+
+  // Llama a setInterval y pasa la función y el intervalo en milisegundos (100ms = 0.1 segundos)
+  setInterval(miFuncion, 100);
+</script>

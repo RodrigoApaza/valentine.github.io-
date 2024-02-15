@@ -1,0 +1,64 @@
+body {
+  background-color: crimson;
+}
+
+#mensaje {
+  color: white;
+  font-size: 20px;
+  font-family: "Press Start 2P", sans-serif;
+  padding: 40px;
+  text-align: center;
+}
+
+#escenario {
+  display: flex;
+  position: relative;
+  background-image: url(wallpaper.gif);
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor sin distorsionarla */
+  background-position: center; /* Centra la imagen dentro del contenedor */
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+#verde {
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+}
+
+#verde img {
+  width: 100px;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+#rosa {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+}
+
+#rosa img {
+  width: 100px;
+  transform: scaleX(-1);
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+#rose {
+  position: absolute;
+  left: 91px;
+  bottom: 58px;
+}
+
+#rose img {
+  width: 50px;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+#texto {
+  color: white;
+  font-size: 20px;
+  font-family: "Press Start 2P", sans-serif;
+  padding: 40px;
+  text-align: center;
+}
